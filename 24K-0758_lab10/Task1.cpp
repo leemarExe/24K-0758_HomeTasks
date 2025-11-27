@@ -13,7 +13,7 @@ class MinHeap{
         if(index <= 0) return;
 
         int parent = (index - 1) / 2;
-        if(heap[parent] < heap[index]){
+        if(heap[parent] > heap[index]){
             swap(heap[parent], heap[index]);
             heapifyUp(parent);
         }
@@ -62,4 +62,5 @@ int main() {
     mh.displayHeap();
 
     return 0;
+
 }
